@@ -1,0 +1,24 @@
+\\Write a Java program to append text to an existing file.
+package java.io;
+import java.io.*;
+
+public class AppendText
+{
+   public static void main(String[] args)
+   {
+      try
+      {
+    	  // class for writing a file
+         FileWriter fw = new FileWriter("C:\\Students.txt", true);
+         //appending text
+         fw.write("\nthis is vishal project.");
+         //closing the file
+         fw.close();
+         System.out.println("The data is success appended to the file.");
+      }
+      catch(IOException ioe)
+      {
+         System.out.print("\nSomething wrong!");
+      }
+   }
+}
